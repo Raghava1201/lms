@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend-container
-        image: raghavam/lms:api
+        image: raghavam/api
         ports:
         - containerPort: 3000
         envFrom:
