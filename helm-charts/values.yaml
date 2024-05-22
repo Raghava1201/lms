@@ -1,0 +1,17 @@
+postgres:
+  secretName: postgres-secret
+  password: QXoxMjM0NTY=
+backend:
+  image: murali1108/api
+  port: 8080
+  dbHost: postgres-cluster-ip-service
+  dbPort: 5432
+  dbUser: postgres
+  dbName: postgres
+  mode: production
+frontend:
+  image: murali1108/webapp
+  port: 80
+configmap:
+  name: my-configmap-name
+  namespace: my-namespace-name=
