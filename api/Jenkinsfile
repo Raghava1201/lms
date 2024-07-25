@@ -17,6 +17,7 @@ stages {
    }
    stage('build backend') {
     steps {
+      sh 'cd lms'
       sh 'cd api'
       sh 'pwd'
      }
