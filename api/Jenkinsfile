@@ -17,10 +17,10 @@ stages {
    }
    stage('build backend') {
     steps {
-      sh 'ls'
-      sh 'cd /api'
+      dir('api'){
       sh 'docker build -t lms-be .'
       sh 'docker container run -dt --name lms-be-con --network lms -p 8080:8080 lms-be'
+      }
      }
    }
  }
